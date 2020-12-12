@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
+import SelectDataset from './components/table/SelectDataset';
+import Popup from './components/Popup';
+import Table from './components/table/Table';
 import './App.css';
+import Loader from "./components/table/Loader";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <SelectDataset/>
+      <Table/>
+      <Loader />
+      <Popup/>
     </div>
   );
 }
